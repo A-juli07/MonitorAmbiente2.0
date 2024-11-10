@@ -125,7 +125,7 @@ function updatehidrogenoData(results) {
             });
 
             dataContainer3.innerHTML = htmlContent;
-            document.getElementById("maxHydrogen").innerText = `Mayor Carbono: ${maxHydrogen}ppm`;
+            document.getElementById("maxHydrogen").innerText = `Mayor Carbono: ${maxHydrogen}%`;
         })
         .catch(error => console.error("Error al buscar datos de la API:", error));
 }
