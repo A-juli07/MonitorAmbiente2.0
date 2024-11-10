@@ -1,4 +1,4 @@
-let channelId = "2720624";
+let channelId = "2737652";
 let bgcolorTemp = '%23e6f7ff';
 let colorTemp = '%23FF4500';
 let bgcolorHumidity = '%23e6f7ff';
@@ -91,7 +91,7 @@ function updateUmidadeData(results) {
 function updateChart3() {
     let results = document.getElementById('results3').value;
     let type = document.getElementById('type3').value;
-    let apiUrl3 = "https://thingspeak.com/channels/" + channelId + "/charts/3?title=Hidrogeno" +
+    let apiUrl3 = "https://thingspeak.com/channels/" + channelId + "/charts/3?title=Carbono" +
         "&bgcolor=" + bgcolorHumidity +
         "&color=" + colorHumidity +
         "&dynamic=" + dynamic +
@@ -121,11 +121,11 @@ function updatehidrogenoData(results) {
                 const date = createdAt.toLocaleDateString();
                 const time = createdAt.toLocaleTimeString();
 
-                htmlContent += `<p>Hidrogeno: ${feed.field3}ppm (${date}, Hora: ${time})</p>`;
+                htmlContent += `<p>Carbono: ${feed.field3}ppm (${date}, Hora: ${time})</p>`;
             });
 
             dataContainer3.innerHTML = htmlContent;
-            document.getElementById("maxHydrogen").innerText = `Mayor Hidrogeno: ${maxHydrogen}ppm`;
+            document.getElementById("maxHydrogen").innerText = `Mayor Carbono: ${maxHydrogen}ppm`;
         })
         .catch(error => console.error("Error al buscar datos de la API:", error));
 }
