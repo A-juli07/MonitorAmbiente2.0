@@ -17,7 +17,7 @@ function updateChart1() {
         "&type=" + type +
         "&update=" + update +
         "&yaxismin=0" +
-        "&yaxismax=30";
+        "&yaxismax=100";
     document.getElementById('iframe1').src = apiUrl1;
     updateTemperatureData(results);
 }
@@ -58,7 +58,7 @@ function updateChart2() {
         "&type=" + type +
         "&update=" + update +
         "&yaxismin=0" +
-        "&yaxismax=30";
+        "&yaxismax=100";
     document.getElementById('iframe2').src = apiUrl2;
     updateUmidadeData(results);
 }
@@ -121,7 +121,7 @@ function updatehidrogenoData(results) {
                 const date = createdAt.toLocaleDateString();
                 const time = createdAt.toLocaleTimeString();
 
-                htmlContent += `<p>Carbono: ${feed.field3}ppm (${date}, Hora: ${time})</p>`;
+                htmlContent += `<p>Carbono: ${feed.field3}% (${date}, Hora: ${time})</p>`;
             });
 
             dataContainer3.innerHTML = htmlContent;
