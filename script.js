@@ -93,7 +93,7 @@ function updateUmidadeData(results) {
 function updateChart3() {
     let results = document.getElementById('results3').value;
     let type = document.getElementById('type3').value;
-    let apiUrl3 = "https://thingspeak.com/channels/" + channelId + "/charts/3?title=Carbono" +
+    let apiUrl3 = "https://thingspeak.com/channels/" + channelId + "/charts/3?title=CO2" +
         "&bgcolor=" + bgcolorCarbono +
         "&color=" + colorCarbono +
         "&dynamic=" + dynamic +
@@ -123,11 +123,11 @@ function updatehidrogenoData(results) {
                 const date = createdAt.toLocaleDateString();
                 const time = createdAt.toLocaleTimeString();
 
-                htmlContent += `<p>Carbono: ${feed.field3}% (${date}, Hora: ${time})</p>`;
+                htmlContent += `<p>CO2: ${feed.field3}% (${date}, Hora: ${time})</p>`;
             });
 
             dataContainer3.innerHTML = htmlContent;
-            document.getElementById("maxHydrogen").innerText = `Mayor Carbono: ${maxHydrogen}%`;
+            document.getElementById("maxHydrogen").innerText = `Mayor CO2: ${maxHydrogen}%`;
         })
         .catch(error => console.error("Error al buscar datos de la API:", error));
 }
