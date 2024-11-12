@@ -3,6 +3,8 @@ let bgcolorTemp = '%23e6f7ff';
 let colorTemp = '%23FF4500';
 let bgcolorHumidity = '%23e6f7ff';
 let colorHumidity = '%23007BFF';
+let bgcolorCarbono = '%23e6f7ff'; 
+let colorCarbono = '%2300FF00';
 let dynamic = true;
 let update = 20;
 
@@ -92,8 +94,8 @@ function updateChart3() {
     let results = document.getElementById('results3').value;
     let type = document.getElementById('type3').value;
     let apiUrl3 = "https://thingspeak.com/channels/" + channelId + "/charts/3?title=Carbono" +
-        "&bgcolor=" + bgcolorHumidity +
-        "&color=" + colorHumidity +
+        "&bgcolor=" + bgcolorCarbono +
+        "&color=" + colorCarbono +
         "&dynamic=" + dynamic +
         "&results=" + results +
         "&type=" + type +
